@@ -7,7 +7,9 @@ License:	GPL
 Group:		Applications/System
 Source0:	http://dl.sourceforge.net/lde/%{name}-%{version}CVS.tar.gz
 # Source0-md5:	ba554c2b1365f52f6ace6490a98afc7b
+Patch0:		%{name}-build.patch
 URL:		http://sourceforge.net/projects/lde/
+BuildRequires:	bison
 BuildRequires:	gpm-devel
 BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -26,6 +28,7 @@ zwyk³y tryb binarny.
 
 %prep
 %setup -q -n %{name}
+%patch0 -p1
 
 %build
 %configure2_13
