@@ -29,7 +29,7 @@ zwyk³y tryb binarny.
 %setup -q
 
 %build
-%configure
+%configure2_13
 %{__make}
 
 %install
