@@ -1,17 +1,17 @@
+Summary:	Linux Disk Editor
+Summary(pl):	Edytor systemów plików
 Name:		lde
 Version:	2.5.1
 Release:	1
-Summary:	Linux Disk Editor
-Summary(pl):	Edytor systemów plików
+License:	GPL
 Group:		Applications/System
 Group(de):	Applikationen/System
 Group(pl):	Aplikacje/System
-License:	GPL
 URL:		http://www.datafoundation.org/lde/
 Source0:	http://www.datafoundation.org/lde/%{name}-%{version}.tar.gz
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildRequires:	ncurses-devel
 BuildRequires:	gpm-devel
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This package allows you to view some Linux fs's (a la Norton disk
@@ -34,7 +34,6 @@ zwyk³y tryb binarny.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT{%{_sbindir},%{_mandir}/man8}
 
 %{__make} install \
