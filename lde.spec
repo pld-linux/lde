@@ -5,8 +5,6 @@ Version:	2.5.1
 Release:	1
 License:	GPL
 Group:		Applications/System
-Group(de):	Applikationen/System
-Group(pl):	Aplikacje/System
 URL:		http://www.datafoundation.org/lde/
 Source0:	http://www.datafoundation.org/lde/%{name}-%{version}.tar.gz
 BuildRequires:	ncurses-devel
