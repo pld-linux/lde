@@ -6,6 +6,7 @@ Release:	2
 License:	GPL
 Group:		Applications/System
 Source0:	http://dl.sourceforge.net/lde/%{name}-%{version}CVS.tar.gz
+# Source0-md5:	ba554c2b1365f52f6ace6490a98afc7b
 URL:		http://sourceforge.net/projects/lde/
 BuildRequires:	ncurses-devel
 BuildRequires:	gpm-devel
