@@ -1,12 +1,12 @@
 Summary:	Linux Disk Editor
 Summary(pl):	Edytor systemów plików
 Name:		lde
-Version:	2.5.1
+Version:	2.6.0
 Release:	1
 License:	GPL
 Group:		Applications/System
-URL:		http://www.datafoundation.org/lde/
-Source0:	http://www.datafoundation.org/lde/%{name}-%{version}.tar.gz
+URL:            http://sourceforge.net/projects/lde/
+Source0:	http://prdownloads.sourceforge.net/lde/%{name}-%{version}CVS.tar.gz
 BuildRequires:	ncurses-devel
 BuildRequires:	gpm-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -24,7 +24,7 @@ odzyskania skasowanych plików. Obs³uguje ext2, minix, xiafs oraz
 zwyk³y tryb binarny.
 
 %prep
-%setup -q
+%setup -q -n %{name}
 
 %build
 %configure2_13
