@@ -2,11 +2,11 @@ Summary:	Linux Disk Editor
 Summary(pl):	Edytor systemów plików
 Name:		lde
 Version:	2.6.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/System
 URL:            http://sourceforge.net/projects/lde/
-Source0:	http://prdownloads.sourceforge.net/lde/%{name}-%{version}CVS.tar.gz
+Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/lde/%{name}-%{version}CVS.tar.gz
 BuildRequires:	ncurses-devel
 BuildRequires:	gpm-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -38,8 +38,6 @@ install -d $RPM_BUILD_ROOT{%{_sbindir},%{_mandir}/man8}
 	sbindir=$RPM_BUILD_ROOT%{_sbindir} \
 	mandir=$RPM_BUILD_ROOT%{_mandir}/man8
 
-gzip -9nf README* TODO WARNING doc/UNERASE src/ChangeLog
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -47,4 +45,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_sbindir}/*
 %{_mandir}/man8/*
-%doc *.gz doc/*.gz doc/*.tex src/*.gz
+%doc doc/*.tex README* TODO WARNING doc/UNERASE src/ChangeLog
