@@ -5,8 +5,8 @@ Version:	2.6.0
 Release:	2
 License:	GPL
 Group:		Applications/System
+Source0:	http://dl.sourceforge.net/lde/%{name}-%{version}CVS.tar.gz
 URL:		http://sourceforge.net/projects/lde/
-Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/lde/%{name}-%{version}CVS.tar.gz
 BuildRequires:	ncurses-devel
 BuildRequires:	gpm-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
