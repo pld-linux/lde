@@ -1,5 +1,5 @@
 Summary:	Linux Disk Editor
-Summary(pl):	Edytor systemów plików
+Summary(pl.UTF-8):   Edytor systemÃ³w plikÃ³w
 Name:		lde
 Version:	2.6.0
 Release:	3
@@ -20,11 +20,11 @@ edit), hex block and inode editing are now supported and you can use
 it to dump and erased file to another partition. Supports ext2, minix,
 xiafs, and generic binary editor mode.
 
-%description -l pl
-Pakiet pozwala na ogl±danie niektórych linuksowych systemów plików (w
-sposób podobny do programu Norton diskedit). Mo¿e byæ u¿yty do
-odzyskania skasowanych plików. Obs³uguje ext2, minix, xiafs oraz
-zwyk³y tryb binarny.
+%description -l pl.UTF-8
+Pakiet pozwala na oglÄ…danie niektÃ³rych linuksowych systemÃ³w plikÃ³w (w
+sposÃ³b podobny do programu Norton diskedit). MoÅ¼e byÄ‡ uÅ¼yty do
+odzyskania skasowanych plikÃ³w. ObsÅ‚uguje ext2, minix, xiafs oraz
+zwykÅ‚y tryb binarny.
 
 %prep
 %setup -q -n %{name}
