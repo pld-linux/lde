@@ -1,5 +1,5 @@
 Summary:	Linux Disk Editor
-Summary(pl.UTF-8):   Edytor systemów plików
+Summary(pl.UTF-8):	Edytor systemów plików
 Name:		lde
 Version:	2.6.0
 Release:	3
