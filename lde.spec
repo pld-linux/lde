@@ -7,6 +7,7 @@ License:	GPL
 Group:		Applications/System
 Source0:	http://dl.sourceforge.net/lde/%{name}-%{version}.tar.gz
 # Source0-md5:	7cd3a798cafc07d084db240fd1d1c830
+Patch0:		%{name}-fix.patch
 URL:		http://lde.sourceforge.net/
 BuildRequires:	bison
 BuildRequires:	gpm-devel
@@ -27,6 +28,7 @@ zwykły tryb binarny.
 
 %prep
 %setup -q -n %{name}
+%patch0 -p1
 
 %build
 %configure
