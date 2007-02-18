@@ -1,0 +1,35 @@
+--- lde/src/swiped/cnews/getdate.y.orig	2003-12-07 02:35:53.000000000 +0100
++++ lde/src/swiped/cnews/getdate.y	2007-02-18 19:42:23.104037972 +0100
+@@ -24,7 +24,7 @@
+ 
+ 	static int timeflag, dateflag, dayflag, relflag;
+ 	static time_t relsec, relmonth;
+-	static int hh, mm, ss, merid, daylight;
++	static int hh, mm, ss, merid, tdaylight;
+ 	static int dayord, dayreq;
+ 	static int month, day, year;
+ 	static int ourzone;
+@@ -68,19 +68,19 @@
+ 		{hh = $1; mm = $3; merid = $4;}
+ 	| NUMBER ':' NUMBER NUMBER 
+ 		{hh = $1; mm = $3; merid = 24;
+-		daylight = STANDARD; ourzone = $4%100 + 60*$4/100;}
++		tdaylight = STANDARD; ourzone = $4%100 + 60*$4/100;}
+ 	| NUMBER ':' NUMBER ':' NUMBER 
+ 		{hh = $1; mm = $3; ss = $5; merid = 24;}
+ 	| NUMBER ':' NUMBER ':' NUMBER MERIDIAN 
+ 		{hh = $1; mm = $3; ss = $5; merid = $6;}
+ 	| NUMBER ':' NUMBER ':' NUMBER NUMBER 
+ 		{hh = $1; mm = $3; ss = $5; merid = 24;
+-		daylight = STANDARD; ourzone = $6%100 + 60*$6/100;};
++		tdaylight = STANDARD; ourzone = $6%100 + 60*$6/100;};
+ 
+ zone:	ZONE 
+-		{ourzone = $1; daylight = STANDARD;}
++		{ourzone = $1; tdaylight = STANDARD;}
+ 	| DAYZONE 
+-		{ourzone = $1; daylight = DAYLIGHT;};
++		{ourzone = $1; tdaylight = DAYLIGHT;};
+ 
+ dyspec:	DAY 
+ 		{dayord = 1; dayreq = $1;}
