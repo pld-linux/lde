@@ -1,13 +1,12 @@
 Summary:	Linux Disk Editor
 Summary(pl.UTF-8):	Edytor systemów plików
 Name:		lde
-Version:	2.6.0
-Release:	3
+Version:	2.6.1
+Release:	1
 License:	GPL
 Group:		Applications/System
-Source0:	http://dl.sourceforge.net/lde/%{name}-%{version}CVS.tar.gz
-# Source0-md5:	ba554c2b1365f52f6ace6490a98afc7b
-Patch0:		%{name}-build.patch
+Source0:	http://dl.sourceforge.net/lde/%{name}-%{version}.tar.gz
+# Source0-md5:	7cd3a798cafc07d084db240fd1d1c830
 URL:		http://lde.sourceforge.net/
 BuildRequires:	bison
 BuildRequires:	gpm-devel
@@ -28,10 +27,9 @@ zwykły tryb binarny.
 
 %prep
 %setup -q -n %{name}
-%patch0 -p1
 
 %build
-%configure2_13
+%configure
 %{__make}
 
 %install
