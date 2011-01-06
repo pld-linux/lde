@@ -31,7 +31,8 @@ zwykły tryb binarny.
 %patch0 -p1
 
 %build
-%configure
+%configure \
+	LIBS="-ltinfo"
 %{__make}
 
 %install
