@@ -2,7 +2,7 @@ Summary:	Linux Disk Editor
 Summary(pl.UTF-8):	Edytor systemów plików
 Name:		lde
 Version:	2.6.1
-Release:	4
+Release:	5
 License:	GPL
 Group:		Applications/System
 Source0:	http://dl.sourceforge.net/lde/%{name}-%{version}.tar.gz
